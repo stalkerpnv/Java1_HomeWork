@@ -1,6 +1,6 @@
 public class Zad6 {
     public static boolean isNegative(int num){
-        if(Math.abs(num)==num) return true;
+        if(Math.abs(num)!=num) return true;
         else return false;
     }
     public static void main(String[]args){
