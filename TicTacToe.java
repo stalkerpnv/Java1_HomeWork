@@ -5,7 +5,6 @@
  * @version dated Dec 1, 2018
  */
 
-import java.awt.*;
 import java.util.InputMismatchException;
 import java.util.Random;
 import java.util.Scanner;
