@@ -14,28 +14,46 @@ public class Homework5{
         persArray[4]=new Person("Novgorodov Aysen", "Scientist", "novaysen@gmail.com", "89244605689", 90000, 55);
 
         for(int i = 0; i < persArray.length; i++){
-            if(persArray[i].age > 40) persArray[i].PrintInfo();
+            if(persArray[i].getAge() > 40) System.out.println(persArray[i].toString());
         }
     }
 }
 
- class Person{
-     String FIO;
-     String prof;
-     String email;
-     String phone;
-     int zp;
-     int age;
+class Person{
+    private String FIO;
+    private String prof;
+    private String email;
+    private String phone;
+    private int zp;
+    private int age;
 
-     Person(String FIO, String prof, String email, String phone, int zp, int age){
-         this.FIO = FIO;
-         this.prof = prof;
-         this.email = email;
-         this.phone = phone;
-         this.zp = zp;
-         this.age = age;
-     }
-     public void PrintInfo(){
-         System.out.println(this.FIO + " " + this.prof + " " + this.email + " " + this.phone + " " + this.zp + " " + this.age);
-     }
- }
+    Person(String FIO, String prof, String email, String phone, int zp, int age){
+        this.FIO = FIO;
+        this.prof = prof;
+        this.email = email;
+        this.phone = phone;
+        this.zp = zp;
+        this.age = age;
+    }
+
+    int getAge(){
+        return age;
+    }
+
+    void setFIO(String FIO){
+        this.FIO = FIO;
+    }
+
+    @Override
+    public String toString() {
+        return   " FIO:" + this.FIO + ";"
+                +" prof: " + this.prof + ";"
+                +" email: " + this.email + ";"
+                +" phone: " + this.phone + ";"
+                +" zp: " + this.zp + ";"
+                +" age: " + this.age + ";";
+    }
+    public void PrintInfo(){
+        System.out.println(this.FIO + " " + this.prof + " " + this.email + " " + this.phone + " " + this.zp + " " + this.age);
+    }
+}
