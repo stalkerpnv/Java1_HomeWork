@@ -8,14 +8,14 @@ public class Homework7 {
     public static void main(String[]args){
         Plate plate = new Plate(100);
         Cat[] cats = {new Cat("Thomas", 100),
-                     new Cat("Myrzik", 25),
-                     new Cat("Barsik", 5)};
+                      new Cat("Myrzik", 25),
+                      new Cat("Barsik", 5)};
         System.out.println("Начальное состояние тарелки " + plate);
         for(Cat cat:cats){
             cat.eat(plate);
             System.out.println(cat);
         }
-        System.out.println(" Состояние тарелки, когда все коты поели " + plate);
+        System.out.println("Состояние тарелки, когда все коты попытались поесть " + plate);
     }
 }
 
