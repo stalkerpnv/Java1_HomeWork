@@ -68,6 +68,6 @@ class Plate{
     }
 
     private void addfood(){
-        food = 100;
+        food = food + 100;
     }
 }
